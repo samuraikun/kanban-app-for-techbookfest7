@@ -1,10 +1,8 @@
 export const state = () => ({
-  nickname: ''
+  title: ''
 })
 
-export const getters = {
-  user: state => state.user
-}
+export const getters = {}
 
 export const mutations = {}
 
