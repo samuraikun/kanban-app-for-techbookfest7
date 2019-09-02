@@ -1,17 +1,15 @@
 <template lang="pug">
-  v-layout(column justify-center align-center)
-    v-flex(xs12 sm8 md6)
-      p App
+  Board
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import Board from '../components/organisms/Board'
 
 export default {
   name: 'Index',
 
-  computed: {
-    ...mapGetters('board', ['tasks'])
+  components: {
+    Board
   }
 }
 </script>

@@ -12,8 +12,7 @@
       v-toolbar-title(v-text='title')
       v-spacer
     v-content
-      v-container
-        nuxt
+      nuxt
 </template>
 
 <script>
