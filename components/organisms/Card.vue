@@ -3,7 +3,8 @@
     v-card-title {{ item.title }}
     v-card-text {{ item.description }}
     v-card-actions
-      v-btn Edit
+      v-btn(color='success') Edit
+      v-btn(color='error') Delete
 </template>
 
 <script>
