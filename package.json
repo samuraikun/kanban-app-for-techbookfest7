@@ -17,7 +17,9 @@
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/pwa": "^2.6.0",
     "cross-env": "^5.2.0",
+    "lodash": "^4.17.15",
     "nuxt": "^2.9.2",
+    "vee-validate": "^2.2.15",
     "vuetify": "^1.5.5",
     "vuetify-loader": "^1.2.1"
   },

@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import Board from '../components/organisms/Board'
+import Board from '../components/Board'
 
 export default {
   name: 'Index',

@@ -5,7 +5,8 @@ const mockTasks = [
     description: 'Vue-CLIを使う',
     status: 'progress',
     assignees: ['hoge', 'fuga'],
-    reviewers: ['samuraikun']
+    reviewers: ['samuraikun'],
+    isNew: false
   },
   {
     id: 2,
@@ -13,7 +14,8 @@ const mockTasks = [
     description: 'Vuexはモジュールモードで',
     status: 'backlog',
     assignees: ['hoge', 'fuga'],
-    reviewers: ['samuraikun']
+    reviewers: ['samuraikun'],
+    isNew: false
   },
   {
     id: 3,
@@ -21,7 +23,8 @@ const mockTasks = [
     description: '型がほしぃ',
     status: 'review',
     assignees: ['hoge', 'fuga'],
-    reviewers: ['samuraikun']
+    reviewers: ['samuraikun'],
+    isNew: false
   },
   {
     id: 4,
@@ -29,7 +32,8 @@ const mockTasks = [
     description: 'わいはNuxt.js使いたいんじゃ',
     status: 'release',
     assignees: ['samuraikun'],
-    reviewers: []
+    reviewers: [],
+    isNew: false
   }
 ]
 
@@ -46,6 +50,15 @@ export const getters = {
   releaseTasks: state => state.tasks.filter(task => task.status === 'release')
 }
 
-export const mutations = {}
+export const mutations = {
+  setTasks(state, task) {
+    const newTasks = [task].concat(state.tasks)
+    state.tasks = newTasks
+  }
+}
 
-export const actions = {}
+export const actions = {
+  createTask({ commit }, task) {
+    commit('setTasks', task)
+  }
+}

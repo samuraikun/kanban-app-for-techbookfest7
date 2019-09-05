@@ -1,23 +1,23 @@
 <template lang="pug">
   .board
     .list__backlog
-      CardList(title='Backlog' :items='backlogTasks')
+      TaskList(title='Backlog' :tasks='backlogTasks')
     .list__progress
-      CardList(title='Progress' :items='progressTasks')
+      TaskList(title='Progress' :tasks='progressTasks')
     .list__review
-      CardList(title='Review' :items='reviewTasks')
+      TaskList(title='Review' :tasks='reviewTasks')
     .list__release
-      CardList(title='Release' :items='releaseTasks')
+      TaskList(title='Release' :tasks='releaseTasks')
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
-import CardList from '../molecules/CardList'
+import TaskList from './TaskList'
 
 export default {
   name: 'Board',
 
-  components: { CardList },
+  components: { TaskList },
 
   computed: {
     ...mapGetters('board', [
@@ -37,9 +37,10 @@ export default {
     '  .     .     .      .     .     .    .     .     . ' 30px
     '  .  backlog  .  progress  .  review  .  release  . ' auto
     '  .     .     .      .     .     .    .     .     . ' 30px
-    / 1fr 320px 1fr 320px 1fr 320px 1fr 320px 1fr;
+    / 1fr 320px 50px 320px 50px 320px 50px 320px 1fr;
 
   .list {
+    border: 1px solid #dddddd;
     &__backlog {
       grid-area: backlog;
     }
